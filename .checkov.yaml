@@ -1,0 +1,8 @@
+branch: master
+download-external-modules: false
+evaluate-variables: true
+external-checks-git:
+- https://github.com/danny-legit-org1/d2.git//checks
+external-modules-download-path: .external_modules
+framework: all
+output: cli
